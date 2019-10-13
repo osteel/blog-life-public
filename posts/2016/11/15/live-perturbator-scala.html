@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="https://life.osteel.me/favicon.ico" />
+
+    <meta name="author" content="Yannick Chenot"/>
+    <meta property="og:image" content="https://scontent-lhr3-1.cdninstagram.com/t51.2885-15/e35/14574240_1576494679326345_3838632977919639552_n.jpg" />
+
+    <meta name="google-site-verification" content="KhtQOQ0ZVgZ55KSEoXMOWo_seu_e_JbV6xBk_SuewYI" />
+
+    <title>Perturbator au Scala (18/10/16) &mdash; osteel's blog</title>
+
+    <meta charset="utf-8" />
+    <link href="https://life.osteel.test/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="osteel's blog Full Atom Feed" />
+    <link href="https://life.osteel.test/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="osteel's blog Full RSS Feed" />
+    <link href="https://life.osteel.test/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="osteel's blog Atom Feed" />
+    <link href="https://life.osteel.test/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="osteel's blog RSS Feed" />
+    <link rel="stylesheet" href="https://life.osteel.me/theme/css/poole.css"/>
+    <link rel="stylesheet" href="https://life.osteel.me/theme/css/syntax.css"/>
+    <link rel="stylesheet" href="https://life.osteel.me/theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="https://life.osteel.me/theme/css/styles.css"/>
+
+  
+
+
+    <meta name="tags" contents="live" />
+    <meta name="tags" contents="music" />
+    <meta name="tags" contents="perturbator" />
+    <meta name="tags" contents="gost" />
+    <meta name="tags" contents="scala" />
+
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="profile">
+      <img src="https://life.osteel.me/theme/img/profile.jpg"/>
+    </div>
+  </div>
+
+  <section>
+    <p>Oh hi! Bienvenue sur mon blog perso. If you're after my technical articles, please head <a href="https://tech.osteel.me">this way</a>.</p>
+  </section>
+
+  <section>
+    <ul class="sidebar-nav">
+        <li><a class="sidebar-nav-item" href="https://life.osteel.me/pages/about.html">About</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Search</h2>
+    <form class="sidebar-nav-item sidebar-nav" action="https://life.osteel.me/search.html" onsubmit="return (this.elements['q'].value.length > 0)">
+        <input class="form-input" type="text" name="q" placeholder="Search" />
+    </form>
+  </section>
+
+  <section>
+    <h2>Categories</h2>
+    <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/blog.html">Blog</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/cinema.html">Cinema</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/expat.html">Expat</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/live.html">Live</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/misc.html">Misc</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/musical.html">Musical</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/opera.html">Opera</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/theatre.html">Theatre</a>
+        <a class="sidebar-nav-item" href="https://life.osteel.me/category/travel.html">Travel</a>
+
+    </nav>
+  </section>
+
+    <section>
+        <h2>Find me</h2>
+        <ul class="sidebar-nav">
+            <li><a class="sidebar-nav-item" href="https://www.osteel.me" target="_blank">Portfolio</a></li>
+            <li><a class="sidebar-nav-item" href="https://github.com/osteel" target="_blank">GitHub</a></li>
+            <li><a class="sidebar-nav-item" href="https://twitter.com/osteel" target="_blank">Twitter</a></li>
+            <li><a class="sidebar-nav-item" href="https://uk.linkedin.com/in/yannickchenot" target="_blank">LinkedIn</a></li>
+            <li><a class="sidebar-nav-item" href="https://instagram.com/osteel" target="_blank">Instagram</a></li>
+            <li><a class="sidebar-nav-item" href="https://www.last.fm/user/OSteEL" target="_blank">last.fm</a></li>
+        </ul>
+    </section>
+
+  <section>
+    <h2>Feeds</h2>
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">All posts&nbsp;
+        [&nbsp;
+ <a href="https://life.osteel.test/feeds/atom.xml" rel="subscribe-atom">Atom</a>        &nbsp;
+ <a href="https://life.osteel.test/feeds/rss.xml" rel="subscribe-rss">RSS</a>        &nbsp;]
+      </li>
+    </ul>
+  </section>
+
+  <div class="sidebar-item">
+    <p>
+    <a href="https://twitter.com/osteel">&copy; @osteel</a> 2015
+    </p>
+    <p class="tiny-note">
+      Powered by <a href="http://getpelican.com">Pelican</a> :: Theme based on <a class="muted" href="https://github.com/thomaswilley/pelicanyan">Pelicanyan</a>
+    </p>
+  </div>
+</div>    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://life.osteel.me/" title="Home">osteel's blog</a>
+            <small>Chroniques d'un autre français à <del>Londres</del> Montréal</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Perturbator au Scala (18/10/16)
+    </h1>
+    <span class="post-date">15/11/2016</span>
+
+    <p>En faisant la queue devant le Scala, je tente de me remémorer la dernière fois que j'ai mis les pieds dans le club de King's Cross, sans succès. J'y rejoins un pote pour voir Perturbator, une relativement récente addition à la mouvance <a href="https://en.wikipedia.org/wiki/Synthwave">synthwave</a>, ce courant musical rétrofuturiste apparu il y a une dizaine d'années et dont College et Kavinsky font partie des fers de lance.</p>
+<p>En gravissant les escaliers débouchant sur le bar dans le hall d'entrée, je suis frappé par le look résolument métal de l'audience - treillis, cheveux longs et t-shirt de groupe, auquel je ne m'attendais pas forcément.</p>
+<p>Il est à peine 20h, j'apprends que Perturbator ne joue qu'à 21h30, mon pote n'est pas encore arrivé, j'ai faim, je l'appelle pour lui dire qu'on se retrouve dehors pour manger un morceau avant le show.<br />
+Je redescends en me demandant quel truc sale je vais bien pouvoir bouffer et me fais stopper par un videur qui me dit que toute sortie est définitive. Je lui demande alors pourquoi j'ai un tampon sur le poignet, il hausse les épaules et répète que toute sortie est définitive.</p>
+<p>Séché par la puissance de son argumentaire, je me fais une raison et décide alors que mon dîner sera composé de pintes de Guinness.</p>
+<p>Mon pote arrive finalement et on décide d'aller checker la seconde première partie, GosT, qui se cache sous un masque en forme de crâne et un hoodie.<br />
+C'est exactement le même délire musical que Perturbator, ça bouge bien, le mec a vraiment l'air de s'éclater, on se laisse ambiancer.</p>
+<blockquote class="instagram-media media-embed" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BLvDDOBh3es/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">GosT - #gig #london #music #live</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Yannick (@osteel) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-10-19T06:52:32+00:00">Oct 18, 2016 at 11:52pm PDT</time></p></div></blockquote>
+
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p>Je scotche un moment sur un gros barbu au look dissuasif qui se trémousse avec beaucoup de conviction sur le beat de l'américain, ce qui me fait beaucoup rire. Puis je réalise soudainement que GosT ne m'est finalement pas inconnu, lorsque je reconnais un titre qui traine dans une de mes playlists depuis quelque temps :</p>
+<iframe class="media-embed" width="560" height="315" src="https://www.youtube.com/embed/8Rso-kMjoBM" frameborder="0" allowfullscreen></iframe>
+
+<p>J'observe également que sa performance se limite plus ou moins à appuyer sur play et bouger les bras frénétiquement mais qu'importe, il fait quand même le taf et laisse définitivement une salle plus chaude qu'à son arrivée lorsqu'il quitte la scène.</p>
+<p>Perturbator débarque ensuite après un court changement de plateau, donnant juste assez de temps à mon collègue pour qu'il revienne avec des pintes et des shots puisque, quitte à faire un aller-retour au bar, autant rentabiliser, vous comprenez.</p>
+<p>Sous sa capuche et sa longue mèche, le parisien ressemble à un emokid tout droit sorti de sa chambre tapissée de posters de mangas et jonchée de boites de jeux vidéo. Il est en tournée pour <em>Uncanny Valley</em>, son dernier album, qui compose donc la majeure partie de son set.</p>
+<blockquote class="instagram-media media-embed" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BLvDHVRh0Sz/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Perturbator - #gig #london #music #live</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Yannick (@osteel) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-10-19T06:53:06+00:00">Oct 18, 2016 at 11:53pm PDT</time></p></div></blockquote>
+
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p>C'est complètement dans le prolongement de GosT, avec plus de lumière et plus de basses, mais peut-être aussi un peu moins d'entrain, même si  ça reste efficace.<br />
+Il joue également quelques titres plus anciens dont le chaleureusement accueilli <em>Satanic Rites</em>, tiré de <em>Dangerous Days</em> :</p>
+<iframe class="media-embed" width="560" height="315" src="https://www.youtube.com/embed/GwWGW8-x6OY" frameborder="0" allowfullscreen></iframe>
+
+<p>Je ne sais pas si ça suffira à me convaincre d'aller voir son homologue Carpenter Brut au <a href="http://www.theunderworldcamden.co.uk/gigs/events/26-jan-17-carpenter-brut-the-underworld/">Underworld en janvier prochain</a>, mais je n'ai sûrement pas passé un mauvais moment.</p>
+<p>(Et la dernière fois que j'ai foutu les pieds au Scala était pour le concert des <a href="/posts/2014/10/03/live-brefs-de-septembre.html">This Will Destroy You</a> il y a deux ans, donc.)</p>
+
+    <p class="meta">
+      <small>
+        Posted by osteel on the
+        <time datetime="2016-11-15T00:00:00+00:00" pubdate>15/11/2016</time>
+          :: [
+          <a href="https://life.osteel.me/tag/live.html">live</a>
+          <a href="https://life.osteel.me/tag/music.html">music</a>
+          <a href="https://life.osteel.me/tag/perturbator.html">perturbator</a>
+          <a href="https://life.osteel.me/tag/gost.html">gost</a>
+          <a href="https://life.osteel.me/tag/scala.html">scala</a>
+          ]
+      </small>
+    </p>
+
+    <section>
+      <h2>Comments</h2>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+    </section>
+  </div>
+</div>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+
+
+      <script type="text/javascript">
+        var disqus_shortname = "osteel";
+              var disqus_identifier = "/posts/2016/11/15/live-perturbator-scala.html";
+              var disqus_url = "https://life.osteel.me/posts/2016/11/15/live-perturbator-scala.html";
+              var disqus_title = "Perturbator au Scala (18/10/16)";
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+      </script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-53994673-3']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53994673-3');
+    ga('send', 'pageview');
+</script>
+
+     </div>
+  </body>
+</html>
